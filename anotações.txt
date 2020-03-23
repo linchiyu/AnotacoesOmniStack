@@ -37,3 +37,7 @@ instalar react (executar o framework react-app - npx - x de eXecute)
 
 executar:
 	npm start
+	http://localhost:3000
+
+
+expo - framework para react native (camera, localização, mapa)
