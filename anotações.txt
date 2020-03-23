@@ -1,0 +1,39 @@
+============
+CONFIGURAR AMBIENTE DE DESENVOLVIMENTO
+============
+instalar node.js
+instalar editor
+
+
+===========
+NODE
+===========
+abrir pasta para o projeto (backend)
+navegar até a pasta
+iniciar o projeto com o comando:
+	npm init -y
+
+instalar framework
+	npm install express
+
+
+==========
+COMEÇANDO A CODAR
+==========
+criar arquivo index.js
+importando framework:
+	const express = require('express');
+
+executar:
+	node index.js
+
+==========
+REACT
+=========
+ir para a pasta do projeto
+instalar react (executar o framework react-app - npx - x de eXecute)
+	npm rm -g create-react-app #remover create-react-app antigo#
+	npx create-react-app nomedoprojeto(frontend)
+
+executar:
+	npm start
