@@ -41,3 +41,49 @@ executar:
 
 
 expo - framework para react native (camera, localização, mapa)
+
+
+
+========================================================
+DIA 2
+========================================================
+GET(buscar), POST(criar), PUT(alterar), DELETE(apagar)
+
+https://insomnia.rest/
+https://www.postman.com/
+
+Query params: parametros enviados após "?" (Filtros, paginação)
+	ex: localhost:3333/users?nome=xxx&idade=yyy
+Route params: parametros utilizados para identificar recursos
+	ex: localhost:3333/users/1
+	ex: app.get('/users/:id', ...)
+Request body: corpo da requisição, usado para criar ou alterar recursos
+	dados vão por json dentro do body do html
+
+
+NODEMON - pacote para que o servidor atualize/identifique as alterações realizadas no código, sem precisar reiniciar o server
+-D = dependencia de desenvolvedor, ou seja, quando for para produção, não precisa ser instalado essa dependencia
+	npm install nodemon -D
+
+package.json > scripts
+scripts para executar como comandos, verificar o start para nodemon
+	"scripts": {
+    	"start": "nodemon src/index.js"
+    },
+	npm start
+
+
+===========
+BANCO DE DADOS
+============
+http://knexjs.org/
+Query builder: table('users').select('*').where()
+	KNEX
+Instalação
+	npm install knex
+	npm install sqlite3
+Conexão com o banco
+	npx knex init
+	configurar o banco em knexfile.js
+
+video 35:56
