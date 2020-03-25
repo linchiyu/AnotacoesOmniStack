@@ -85,5 +85,28 @@ Instalação
 Conexão com o banco
 	npx knex init
 	configurar o banco em knexfile.js
+		tipo de banco
+		senhas
+		migrations > directory /*migrations são logs de alteração de banco*/
 
-video 35:56
+Criação da estrutura do banco
+	Criar migration
+		npx knex migrate:make create_ongs(nome da migration)
+	alterar up e down da migration criada com as tabelas
+	Executar migration
+		npx knex migrate:latest
+	Voltar atras na migration
+		npx knex migrate:rollback
+
+=============
+Separação em controllers
+por convenção cada controller não deve passar de 5 metodos
+	listar
+	listar 1
+	criar
+	alterar
+	deletar
+=============
+CORS
+colocar modulo de segurança CORS
+	npm install cors

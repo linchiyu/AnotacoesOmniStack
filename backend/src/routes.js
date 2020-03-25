@@ -1,57 +1,31 @@
 const express = require('express');
+const crypto = require('crypto');
 
 const routes = express.Router();
 
-routes.get('/', (request, response) => {
-	return response.send('hello word');
-});
+const connection = require('./database/connection');
+const OngController = require('./controller/OngController');
+const IncidentController = require('./controller/IncidentController');
+const ProfileController = require('./controller/ProfileController');
+const SessionController = require('./controller/SessionController');
 
-routes.get('/json', (request, response) => {
-	return response.json({
-		evento: 'semana omnistack',
-		aluno: 'aluno'
-	});
-});
 
-/**
-Query params
-localhost:3333/users?nome=Diego
-**/
-routes.get('/users', (request, response) => {
-	const params = request.query;
+routes.post('/sessions', )
 
-	console.log(params); /*name=Diego*/
-	return response.json({
-		params
-	});
-});
+/*routes.get('/ongs', async (request, response) => {
+	const ongs = await connection('ongs').select(*);
 
-/**
-Route params
-localhost:3333/users/1
-**/
-routes.get('/users/:id', (request, response) => {
-	const id = request.params;
+	return response.json(ongs);
+});*/
+routes.get('/ongs', OngController.index);
+routes.post('/ongs', OngController.create);
 
-	console.log(id); /*1*/
-	return response.json({
-		id
-	});
-});
+routes.get('/profile', ProfileController.index);
 
-/**
-Request body
-localhost:3333/users
-body:{nome:"xxx"}
-**/
-routes.post('/users/create', (request, response) => {
-	const body = request.body;
+routes.get('/incidents', IncidentController.index);
+routes.post('/incidents', IncidentController.create);
+routes.delete('/incidents/:id', IncidentController.delete);
 
-	console.log(body); /*1*/
-	return response.json({
-		body
-	});
-});
 
 /*exportando as rotas para que outros arquivos possam 'enxergar' routes.js*/
 module.exports = routes;
