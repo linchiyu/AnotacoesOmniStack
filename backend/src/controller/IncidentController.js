@@ -21,7 +21,7 @@ module.exports = {
 
 		response.header('X-Total-Count', count['count(*)']);
 		return response.json(incidents);
-	}
+	},
 
 
 	async create(request, response){
@@ -36,7 +36,7 @@ module.exports = {
 		});
 
 		return response.json({ id });
-	}
+	},
 
 	async delete(request, response) {
 		const { id } = request.params;

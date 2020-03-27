@@ -1,8 +1,30 @@
 import React, { useState } from 'react';
 
-import Header from './Header';
-/*Componente App*/
+
+import './global.css';
+
+import Routes from './routes';
+
+
 function App() {
+  return (
+    <Routes />
+  );
+}
+
+
+
+/*import Logon from './pages/Logon';
+function App() {
+  return (
+    <Logon />
+  );
+}*/
+
+
+/*import Header from './Header';*/
+/*Componente App*/
+/*function App() {
   const [counter, setCounter] = useState(0);
 
   //useState = [valor, função de atualização]
@@ -18,6 +40,6 @@ function App() {
       <button onClick={increment}>Incrementar</button>
     </div>
   );
-}
+}*/
 
 export default App;

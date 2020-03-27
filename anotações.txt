@@ -129,4 +129,30 @@ Estado - informação que deverá ser mantida pelo componente
 Imutabilidade - os objetos não mudam, somente sua referencia, assim, quando se quer alterar o valor de um objeto, substituir ele por um novo objeto com o novo valor
 	isso acaba melhorando a performance: "Determinar se um objeto imutável mudou é consideravelmente mais fácil. Se a referência para o objeto atual é diferente da anterior, então o objeto mudou."
 
-tempo 22:59
+Pacote para icones react
+	npm install react-icons
+	import { FiLogIn } from 'react-icons/fi';
+	<FiLogIn size='' color=''/>
+
+==========
+ROTAS
+===========
+Rotas no react
+	npm install react-router-dom
+
+se colocar <a></a>, o react vai recarregar toda a página, recarregar todo o react,
+por isso em links deve-se utilizar o 'Link to' do react-router-dom
+
+==========
+CONEXÃO COM API
+===========
+instalar cliente http
+	npm install axios
+
+por padrão, formulários submit recarregam a página, para combater isso colocar um evento 'e' na função e 'e.preventDefault()'
+
+==============
+useState - objetos constantes [valor, função de alteração]
+useHistory - serve para navegar para outras rotas do app
+useEffect - disparar função por evento
+	useEffect(função a ser executada, lista de eventos para a função ser executada)

@@ -10,7 +10,8 @@ const ProfileController = require('./controller/ProfileController');
 const SessionController = require('./controller/SessionController');
 
 
-routes.post('/sessions', )
+
+routes.post('/sessions', SessionController.create);
 
 /*routes.get('/ongs', async (request, response) => {
 	const ongs = await connection('ongs').select(*);
