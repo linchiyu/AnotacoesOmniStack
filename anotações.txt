@@ -1,3 +1,7 @@
+========================================================
+DIA 1
+========================================================
+
 ============
 CONFIGURAR AMBIENTE DE DESENVOLVIMENTO
 ============
@@ -110,3 +114,19 @@ por convenção cada controller não deve passar de 5 metodos
 CORS
 colocar modulo de segurança CORS
 	npm install cors
+
+
+
+
+========================================================
+DIA 3
+========================================================
+Componente - função do JS que retorna HTML
+JSX - Javascript XML
+Propriedade - atributos de um elemento de HTML
+	ex: <h1 id="titulo1"></h1> id é uma propriedade
+Estado - informação que deverá ser mantida pelo componente
+Imutabilidade - os objetos não mudam, somente sua referencia, assim, quando se quer alterar o valor de um objeto, substituir ele por um novo objeto com o novo valor
+	isso acaba melhorando a performance: "Determinar se um objeto imutável mudou é consideravelmente mais fácil. Se a referência para o objeto atual é diferente da anterior, então o objeto mudou."
+
+tempo 22:59
