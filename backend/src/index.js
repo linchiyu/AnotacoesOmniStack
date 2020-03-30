@@ -1,5 +1,6 @@
 const express = require('express');
-
+/*importação do validador*/
+const { errors } = require('celebrate'); 
 /*importação do modulo de segurança de acesso*/
 const cors = require('cors');
 /*importação das rotas*/
@@ -19,6 +20,6 @@ app.use(cors());
 express irá converter as requisições de json para objeto*/
 app.use(express.json());
 app.use(routes);
-
+app.use(errors());
 
 app.listen(3333);
